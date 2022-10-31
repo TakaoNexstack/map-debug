@@ -1,7 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-  swcMinify: true,
-}
+  poweredByHeader: false,
+  reactStrictMode: false,
+  swcMinify: false,
+  images: {
+    disableStaticImages: true,
+  },
+  experimental: {
+    esmExternals: false,
+    outputStandalone: true,
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
